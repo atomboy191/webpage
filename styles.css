@@ -41,3 +41,8 @@ body{
 .navbar-dark{
     background-color: #512da8;
 }
+
+.navbar-logo{
+    height: 30px;
+    width: 41px;
+}
