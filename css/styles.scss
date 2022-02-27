@@ -83,14 +83,13 @@ body{
 
 .modal-header{
     background-color: $background-dark;
-    color: white;
+    color: floralwhite;
+    .close{
+        color: floralwhite;
+    }
 }
 
 .modal-body{
     background-color: $background-pale;
-    color: black;
-}
-
-.close{
     color: floralwhite;
 }
