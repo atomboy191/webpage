@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a role="button" id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -43,7 +43,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="loginClose">
                         &times;
                     </button>
                 </div>
@@ -80,7 +80,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="reserveClose">
                         &times;
                     </button>
                 </div>
@@ -117,13 +117,14 @@
                         </div>
                         <div class="form-group row">
                             <label for="section" class="col-md-3 col-form-label">Section</label>
-                            <div">
+                            <div>
                                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                     <button type="button" class="btn btn-success">Non-Smoking</button>
                                     <button type="button" class="btn btn-danger">Smoking</button>                                   
                                   </div>
                             </div>
                         </div>
+                
                         <div class="form-group row">
                             <label for="dateTime" class="col-md-3 col-form-label">Date and Time</label>
                             <div class="col-md-4">
@@ -156,7 +157,7 @@
                         <img src="./img/logo.png" class="img-fluid">
                     </div>
                     <div class="col-4 align-self-center offset-2">
-                        <a role="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-warning btn-block nav-link">
+                        <a role="button" id="reserveButton" class="btn btn-warning btn-block nav-link">
                             Reserve Table
                         </a>
                     </div>
@@ -332,6 +333,21 @@
                     $('#carouselButton').children('span').addClass('fa-pause');                   
                 }
             });
+
+            $('#reserveButton').click(function(){
+                $('#reserveModal').modal('toggle');
+            });
+            $('#reserveClose').click(function(){
+                $('#reserveModal').modal('toggle');
+            });
+
+            $('#loginButton').click(function(){
+                $('#loginModal').modal('toggle');
+            });
+            $('#loginClose').click(function(){
+                $('#loginModal').modal('toggle');
+            });
+            
         });
     </script>
 </body>

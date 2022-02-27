@@ -80,3 +80,17 @@ body{
     bottom: 0px;
     z-index: 1;
 }
+
+.modal-header{
+    background-color: $background-dark;
+    color: white;
+}
+
+.modal-body{
+    background-color: $background-pale;
+    color: black;
+}
+
+.close{
+    color: floralwhite;
+}
